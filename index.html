@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <nav class = "navbar">
+        <div class="tituloNav">
+            Titulo Web
+        </div>
+
+        <div class = "menu">
+            <a href="">Inicio</a>
+            <a href="login.html">Iniciar Sesion</a>
+            <a href="tabla.html">Tabla</a>
+        </div>     
+    </nav>
+
+
+
+    <div class = "FormularioContenedor">
+        <form class="formulariostyle" id="Formularios">
+                <h1 class ="titulo">Registro de Usuario</h1>
+                <hr style =" margin-bottom: 10px;">
+            
+            <div class="fila">
+                <div class="campo">
+                    <label> Nombre </label>
+                    <input type="text" id="nombreI" placeholder="Antonio">
+                </div>
+
+                <div class="campo">
+                    <label> Apellido </label>
+                    <input type="text" id="apellidoI" placeholder="Santibáñez">
+                </div>
+
+                <div class = "campo">
+                    <label> Contraseña </label>
+                    <input type="password" id="Password" placeholder="********">
+                </div>
+                
+                <div class = "campo" > 
+                    <label> Confirmar Contraseña </label>
+                    <input type="password" id="ConfPassword" placeholder="********">
+                </div>        
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Correo</label>
+                    <input type="text" id="correoI" placeholder="antonio@exemple.cl">
+                </div>
+
+                <div class="campo">
+                    <label>Pais</label>
+                    <select id="paisSelect">
+                        <option Value="">Seleccione un pais</option>
+                        <option value="CL">Chile</option>
+                        <option value="MX">México</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="ES">España</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Telefono</label>
+                    <input type="text" id="telefonoI" placeholder="9 12345678">
+                
+                </div>
+
+                <div class="campo">
+                    <label>Direccion</label>
+                    <input type="text" id="direccionI" placeholder="Calle 123"  >
+                </div>
+
+            </div>
+        
+            <div class="botones">
+                <button class="guardarBtn"type="submit" >Guardar</button>
+                <button class="limpiarBtn" type="reset">Limpiar</button>
+                <button class="">
+            </div>
+
+            <span>Si tienes cuenta <a href="login.html" style="cursor: pointer; color: blue;"> Iniciar Sesion</a> </span>
+        </form>
+    </div>
+    <script src="funcionalidades.js"></script>
+</body>
+</html>

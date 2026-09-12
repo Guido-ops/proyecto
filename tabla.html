@@ -1,0 +1,44 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>           
+            <th>Correo</th>           
+            <th>Pais</th>           
+            <th>Telefono</th>           
+            <th>Direccion</th>  
+        </tr>         
+    </thead>
+
+    <tbody id = "tablaDatos">
+        
+    </tbody>
+
+    <script>
+        
+        const tablaDatos = document.getElementById("tablaDatos");
+        
+        let obtenerDatosUsuarios;
+        try{
+            obtenerDatosUsuarios  = JSON.parse(localStorage.getItem("usuarioLocalStorage"));
+        }catch(error) {
+            console.error("Datos corruptos en LocalStorage: ", error);
+            obtenerDatosUsuarios = null;
+        }
+        const camposEsperados = ["nombre", "apellido", "correo", "pais", "telefono", "direccion"];
+        const datosCompletos = obtenerDatosUsuarios && camposEsperados.every(campo => campo in obtenerDatosUsuarios);
+        
+        if(!datosCompletos){
+            tablaDatos.innerHTML = `<tr> <td colspan = "6">No hay datos Registrados</td> </tr>`;   
+        }else{   
+            const fila = document.createElement("tr");
+            camposEsperados.forEach(campo => {
+                const celda = document.createElement("td");
+                celda.textContent = obtenerDatosUsuarios[campo];
+                fila.appendChild(celda);
+            })
+            tablaDatos.appendChild(fila);
+        }
+        console.log("recupendo datos: ", obtenerDatosUsuarios);
+    </script>
+</table>

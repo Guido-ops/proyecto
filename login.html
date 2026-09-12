@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+        <nav class = "navbar">
+        <div class="tituloNav">
+            Titulo Web
+        </div>
+
+        <div class = "menu">
+            <a href="">Inicio</a>
+            <a href="index.html">Crear Usuario</a>
+            <a href="tabla.html">Tabla</a>
+        </div>  
+
+    </nav>
+    <div class = "FormularioContenedor2">
+        <form class="formulariostyle2" id="Login">
+                <h1 class ="titulo">Inicio de Usuario</h1>
+                <hr style =" margin-bottom: 10px;">
+
+            <div class = "fila">
+                <div class="campo">
+                    <label>Correo</label>
+                    <input type="text" id="correo2" placeholder="Antonio@exemple.com">
+                </div>
+
+                <div class="campo">
+                    <label>Contraseña</label>
+                    <input type="password" id="contra" placeholder="********">
+                </div>
+
+                <div class="botones">
+                    <button class="guardarBtn" type="submit" >Iniciar Sesion</button>
+                </div>
+
+                <span>Si no tienes cuenta <a href="index.html" style="cursor: pointer; color: blue;"> Crear Usuario</a> </span>
+
+            </div>
+        </form>
+    </div>
+    <script src = "validacion.js"></script>
+
+</body>
