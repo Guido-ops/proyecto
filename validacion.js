@@ -20,7 +20,7 @@ loginUsuario.addEventListener("submit", function(event){
     
     console.log("correo: " + correo);
     console.log("contraseña: " + contraseña);
-
+    window.location = "DinoChan.html";
 });
 
 function validarUsuario(usuario){
